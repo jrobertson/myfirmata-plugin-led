@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'myfirmata-plugin-led'
-  s.version = '0.2.0'
+  s.version = '0.2.1'
   s.summary = 'A MyFirmata plugin to control 1 or more LEDs via a SimplePubSub subscription.'
   s.authors = ['James Robertson']
   s.files = Dir['lib/myfirmata-plugin-led.rb']

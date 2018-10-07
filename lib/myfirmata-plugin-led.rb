@@ -7,6 +7,7 @@
 require 'pinx'
 
 
+
 class MyFirmataPluginLed
 
   class Led < PinX
@@ -71,6 +72,11 @@ class MyFirmataPluginLed
     
     if @pins.any?  then
       @led = @pins.map{|x| Led.new @arduino, x}
+    end
+    
+
+    if @settings[:auto_test] then
+      Thread.new {@led.each {|led| led.on; sleep 0.5; led.off; sleep 0.3} }
     end
     
   end
